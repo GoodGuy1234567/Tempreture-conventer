@@ -38,7 +38,7 @@ Submit.onclick = function(){
     }else if(first == 1 && second == 2){
         results.textContent = TextInput.value * 1.8 + 32 + " ℉"
     }else if(first == 1 && second == 3){
-        results.textContent = TextInput.value + 273.15 + " K"
+        results.textContent = TextInput.value * 5 / 5 + 273.15 + " K"
     }else if(first == 2 && second == 1){
         results.textContent = (TextInput.value - 32) * 5 / 9  + " ℃"
     }else if(first == 2 && second == 3){
