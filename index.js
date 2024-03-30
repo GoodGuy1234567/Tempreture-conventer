@@ -7,8 +7,8 @@ const Kr = document.getElementById("Kr");
 const TextInput = document.getElementById("textInput");
 const Submit = document.getElementById("submit");
 const results = document.getElementById("results")
-let first;
-let second;
+let first = 0;
+let second = 0;
 
 Submit.onclick = function(){
     if(C.checked){
@@ -29,8 +29,12 @@ Submit.onclick = function(){
     }else{
         results.textContent = "You didn't choose something"
     };
-    if(first == second){
-        results.textContent = "You can't pick the same units of measurement or you didn't choose them"
+    if(first == 0 && second == 0){
+        results.textContent = 'Pick units before  pressing "Submit"'
+    }else if(first == second){
+        results.textContent = "You can't pick the same units of measurement"
+    }else if(TextInput.value == ''){
+        results.textContent = "Plese enter your tempreture"
     }else if(first == 1 && second == 2){
         results.textContent = TextInput.value * 1.8 + 32 + " ℉"
     }else if(first == 1 && second == 3){
